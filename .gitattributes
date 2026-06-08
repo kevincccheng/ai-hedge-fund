@@ -1,0 +1,4 @@
+# Force correct line endings regardless of each machine's core.autocrlf setting,
+# so Kevin's convenience scripts behave correctly on both Windows and Mac.
+*.bat text eol=crlf
+*.sh  text eol=lf
