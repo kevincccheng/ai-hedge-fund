@@ -24,7 +24,10 @@ echo "[INFO] Starting frontend (React) on http://localhost:5173 ..."
 (cd app/frontend && nohup npm run dev > ../../frontend.log 2>&1 &)
 
 echo "[INFO] Waiting for services to start..."
-sleep 3
+sleep 5
+
+echo "[INFO] Seeding default flow (first run only)..."
+python3 seed_default_flow.py
 
 echo "[INFO] Opening browser..."
 open "http://localhost:5173" 2>/dev/null || true
